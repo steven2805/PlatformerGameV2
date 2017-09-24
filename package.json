@@ -1,11 +1,23 @@
 {
-  "name": "q",
+  "name": "game",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "bundle": "cd client && webpack -w"
   },
-  "author": "Steven MacDonald",
-  "license": "ISC"
+
+  "author": "",
+  "license": "ISC",
+
+  "devDependencies": {
+    "webpack": "^3.5.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "nodemon": "^1.11.0"
+  }
 }
