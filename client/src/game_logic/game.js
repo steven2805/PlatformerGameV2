@@ -5,7 +5,7 @@ var gameApp = function(){
 
   var canvas = document.getElementById("game-canvas");
   var level = new levelBuilder(levelPlan[0]);
-  level.constructMap;
+  level.constructMap();
   console.log(levelPlan[1]);
 
 

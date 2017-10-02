@@ -1,23 +1,24 @@
 var levelsPlan = 
 [[["Summer Image","Red Brick","Snow ground",4,5,6,7,8],[
+
 "                                ", 
 "                                ", 
-"  P     c                       ", 
+"                                ", 
 " xxxx xxxxxxx                   ", 
 "                                ", 
 "                                ", 
 "                                ", 
 "x x x                    ggggg  ", 
 "xxxxx   xxxxxxxxxxxxxx  bbbbbb  ", 
-"xxxxx                   bb  K   ", 
+"xxxxx                   bb      ", 
 "xx xx            xxxxxxxbb  bbbb", 
-"xxxxx     c             bb    bb", 
-"xxxxxxxxx xxx              c  bb", 
-"xxxxx         c         bbbbbbbb", 
-"xxxD         xx      x  bbbbbbbb", 
+"xxxxx                   bb    bb", 
+"xxxxxxxxx xxx                 bb", 
+"xxxxx                   bbbbbbbb", 
+"xxx          xx         bbbbbbbb", 
 "xxx                    gbbbbbbbb", 
 "xxxxxgggggggggg  gggggggbbbbbbbb", 
-"xxxxxxxxxxxxxxx  xxxxxxxxxxxxxxx"  
+"xxxxxxxxxxxxxxx  xxxxxxxxxxxxxxx" 
 ]],
 
 [["Golden_Coast","Green leaves","Dirt Ground",4,5,6,7,8],[
@@ -39,7 +40,6 @@ var levelsPlan =
 "xxx                    gbbbbbbbb", 
 "xxxxxgggggggggg  gggggggbbbbbbbb", 
 "xxxxxxxxxxxxxxx  xxxxxxxxxxxxxxx" 
-
 ]]]
 
 module.exports = levelsPlan;
