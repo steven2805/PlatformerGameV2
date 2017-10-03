@@ -1,21 +1,23 @@
 var levelPlan = require('./levelPlans');
 var levelBuilder = require('./levelBuilder');
+var Player = require('./player');
+var Collision = require('./collisions');
 
 var gameApp = function(){
-
-  // var canvas = document.getElementById("game-canvas");
   var level = new levelBuilder(levelPlan[0]);
-   level.constructMap();
-  // console.log(levelPlan[1]);
-  var counter = 0;
+  level.constructMap();
+  var player = new Player()
+  var collision = new Collision(level.walls);
 
-function sceneLoading(timestamp){
-  level.drawLevel();
-  console.log(counter++);
+console.log(collision);
 
-  requestAnimationFrame(sceneLoading)
 
-}
+  function sceneLoading(timestamp){
+    
+    player.checkingStatues(level);
+    level.drawLevel();
+    requestAnimationFrame(sceneLoading)
+  }
 
   requestAnimationFrame(sceneLoading);
 

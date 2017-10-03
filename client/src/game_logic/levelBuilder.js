@@ -18,11 +18,16 @@ levelBuilder = function(plan){
  this.coins = [];
  this.wood  = [];
 
- this.playerSpawn = null;
+ this.playerPosition = null;
+
+
+
 
 
 }
 
+var imgBricks = document.createElement('img');
+imgBricks.src = "/images/bricks.png"
 
 levelBuilder.prototype.constructMap = function(){
   var yArray = [];
@@ -49,7 +54,7 @@ levelBuilder.prototype.constructMap = function(){
 levelBuilder.prototype.objectFinder = function(){
   for( var y = 0; y < this.height; y++){
     for ( var x = 0; x < this.width; x++){
-      var calculation = (y * 34) + x;
+      var calculation = (y * 32) + x;
       var location = this.map[calculation];
 
       switch(this.plan[y][x]){        
@@ -75,7 +80,7 @@ levelBuilder.prototype.objectFinder = function(){
         this.door.push(location);
         break;
         case 'p':
-        this.playerSpawn = location
+        this.playerPosition = location
         default:
         break;
       }
@@ -94,11 +99,11 @@ levelBuilder.prototype.drawLevel = function(){
   var cube = this.cubeSize
 
   this.walls.forEach(function(coords){
-    ctx.rect(coords[0],coords[1],cube,cube);
+    ctx.drawImage(imgBricks,coords[0],coords[1],cube,cube);
     ctx.stroke();  
   })
 
-  ctx.fillRect(this.playerSpawn[0],this.playerSpawn[1],20,40);
+  ctx.fillRect(this.playerPosition[0],this.playerPosition[1],20,40);
   ctx.stroke();
  
 }
