@@ -80,7 +80,7 @@ levelBuilder.prototype.objectFinder = function(){
         this.door.push(location);
         break;
         case 'p':
-        this.playerPosition = location
+        this.playerPosition = location;
         default:
         break;
       }
@@ -93,8 +93,16 @@ levelBuilder.prototype.objectFinder = function(){
 // temporary needs replacing with actual draw function
 
 levelBuilder.prototype.drawLevel = function(){
+
+
+
   var c = document.getElementById("game-canvas");
+
   var ctx = c.getContext("2d");
+
+  ctx.clearRect(0,0,1280,720);
+//   console.log(this.height);
+// console.log(this.walls);
   ctx.translate(0,0);
   var cube = this.cubeSize
 

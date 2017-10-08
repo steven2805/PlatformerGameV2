@@ -1,24 +1,24 @@
 var levelsPlan = 
 [[["Summer Image","Red Brick","Snow ground",4,5,6,7,8],[
-
+ 
 "                                ", 
 "                                ", 
-"                   p            ", 
-" xxxx xxxxxxx                   ", 
+"p                               ", 
+"                                ",  
+"                                ", 
+"x                               ", 
+" x    x                         ", 
+"xxxxxxxxxxx                     ", 
+"           x                    ", 
+"            x                   ", 
+"             x                  ", 
+"              x                 ", 
+"               x                ", 
+"                xxxx            ", 
 "                                ", 
 "                                ", 
 "                                ", 
-"x x x                    ggggg  ", 
-"xxxxx   xxxxxxxxxxxxxx  bbbbbb  ", 
-"xxxxx                   bb      ", 
-"xx xx            xxxxxxxbb  bbbb", 
-"xxxxx                  bb     bb", 
-"xxxxxxxxx xxx                 bb", 
-"xxxxx                   bbbbbbbb", 
-"xxx         xx      x   bbbbbbbb", 
-"xxx                    gbbbbbbbb", 
-"xxxxxgggggggggg  gggggggbbbbbbbb", 
-"xxxxxxxxxxxxxxx  xxxxxxxxxxxxxxx" 
+"                                ", 
 ]],
 
 [["Golden_Coast","Green leaves","Dirt Ground",4,5,6,7,8],[
