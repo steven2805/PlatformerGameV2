@@ -21,61 +21,73 @@ var gameApp = function(){
      player.moveLeft = true;
    }
    if (evt.keyCode === 32){
-      // player.jumping = true;
-    }
-  } 
+    console.log("Jumping activate")
+    player.jumping = true;
+  }
+} 
 
-  var keyUpHandler = function(evt) {
-    if (evt.keyCode === 39) {
-      console.log("key has been lifted");
-      player.moveRight = false;
+var keyUpHandler = function(evt) {
+  if (evt.keyCode === 39) {
+    console.log("key has been lifted");
+    player.moveRight = false;
+  }
+  if (evt.keyCode === 37) {
+    player.moveLeft = false;
+  }
+  if (evt.keyCode === 32) {
+    player.jumping = false; 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('keydown', keyDownHandler, false)
+document.addEventListener('keyup', keyUpHandler, false)
+
+function sceneLoading(timestamp){
+  if(player.falling === false){
+    if(player.jumping){
+      player.checkingJumping(level);
+      var collision = new Collision(level,player);
+      player.falling = true;
     }
-    if (evt.keyCode === 37) {
-      player.moveLeft = false;
-    }
-    if (evt.keyCode === 32) {
-      player.jumping = false; 
+    else{
+      player.jumping = false;
     }
   }
 
 
 
+  if(player.falling === true || player.moveRight === true 
+    || player.moveLeft === true){
+    console.log(player.falling, "falling")
+  var collision = new Collision(level, player);
+  player.checkingStatues(level);
+}    
+level.drawLevel();
+requestAnimationFrame(sceneLoading)
+}
+
+requestAnimationFrame(sceneLoading);
 
 
 
 
-
-
-
-
-
-
-
-  document.addEventListener('keydown', keyDownHandler, false)
-  document.addEventListener('keyup', keyUpHandler, false)
-
-  function sceneLoading(timestamp){
-
-
-    if(player.falling === true || player.moveRight === true || player.moveLeft === true){
-      console.log("something is true falling or moving");
-      player.checkingStatues(level);
-      var collision = new Collision(level, player);
-    }    
-    level.drawLevel();
-
-    requestAnimationFrame(sceneLoading)
-  }
-
-  requestAnimationFrame(sceneLoading);
-
-
-
-
-  console.log(level.width);
-  console.log(level.height);
-  console.log(level.cubeSize);
-  console.log(level.groundStyle);
+console.log(level.width);
+console.log(level.height);
+console.log(level.cubeSize);
+console.log(level.groundStyle);
 
 
 

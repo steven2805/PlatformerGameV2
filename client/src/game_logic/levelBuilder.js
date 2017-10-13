@@ -20,10 +20,6 @@ levelBuilder = function(plan){
 
  this.playerPosition = null;
 
-
-
-
-
 }
 
 var imgBricks = document.createElement('img');
@@ -103,34 +99,18 @@ levelBuilder.prototype.drawLevel = function(){
   ctx.clearRect(0,0,1280,720);
 //   console.log(this.height);
 // console.log(this.walls);
-  ctx.translate(0,0);
-  var cube = this.cubeSize
+ctx.translate(0,0);
+var cube = this.cubeSize
 
-  this.walls.forEach(function(coords){
-    ctx.drawImage(imgBricks,coords[0],coords[1],cube,cube);
-    ctx.stroke();  
-  })
+this.walls.forEach(function(coords){
+  ctx.drawImage(imgBricks,coords[0],coords[1],cube,cube);
+  ctx.stroke();  
+})
 
-  ctx.fillRect(this.playerPosition[0],this.playerPosition[1],20,40);
-  ctx.stroke();
- 
+ctx.fillRect(this.playerPosition[0],this.playerPosition[1],20,40);
+ctx.stroke();
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 module.exports = levelBuilder;

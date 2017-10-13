@@ -1,9 +1,9 @@
 var levelsPlan = 
 [[["Summer Image","Red Brick","Snow ground",4,5,6,7,8],[
  
-"                                ", 
-"                                ", 
 "p                               ", 
+"                                ", 
+"                                ", 
 "                                ",  
 "                                ", 
 "x                               ", 
@@ -14,7 +14,7 @@ var levelsPlan =
 "             x                  ", 
 "              x                 ", 
 "               x                ", 
-"                xxxx            ", 
+"                xxxxs            ", 
 "                                ", 
 "                                ", 
 "                                ", 

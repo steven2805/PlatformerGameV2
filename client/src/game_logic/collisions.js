@@ -8,23 +8,20 @@ var Collision = function(levelArray,player){
   }
 
   for(var coords of wallsArray){
-    console.log(playerPosition);
     if(playerPosition[1] + 40 === coords[1]){
       if(between(playerPosition[0], coords[0],coords[0] + 40)){
         player.falling = false;
-        console.log("tracking" + player.falling);
         break;
       }
       else{
         player.falling = true;
       }
-
     }
   }
 
   for(var coords of wallsArray){
     if(playerPosition[0] + 20 === coords[0]){
-      if(between(playerPosition[1],coords[1], coords[1] + 39)){
+      if(between(playerPosition[1],coords[1], coords[1] + 40)){
         player.canMoveRight = false;
         break;
       }
@@ -36,7 +33,7 @@ var Collision = function(levelArray,player){
 
   for(var coords of wallsArray){
     if(playerPosition[0] === coords[0] + 40 ){
-      if(between(playerPosition[1],coords[1], coords[1] + 39)){
+      if(between(playerPosition[1],coords[1], coords[1] + 40)){
         player.canMoveLeft = false;
         break;
       }
@@ -46,13 +43,5 @@ var Collision = function(levelArray,player){
     }
   }
 }
-
-
-
-module.exports = Collision;
-
-
-
-
 
 module.exports = Collision;
