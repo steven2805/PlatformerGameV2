@@ -11,9 +11,7 @@ var gameApp = function(){
   var player = new Player()
 
 
-
   var keyDownHandler = function(evt) {
-    console.log("something");
     if (evt.keyCode === 39) {
       player.moveRight = true;
     }
@@ -21,8 +19,7 @@ var gameApp = function(){
      player.moveLeft = true;
    }
    if (evt.keyCode === 32){
-    console.log("Jumping activate")
-    player.jumping = true;
+     player.jumping = true;
   }
 } 
 
@@ -56,6 +53,9 @@ document.addEventListener('keydown', keyDownHandler, false)
 document.addEventListener('keyup', keyUpHandler, false)
 
 function sceneLoading(timestamp){
+
+
+  // this si used for the jumping mechanic
   if(player.falling === false){
     if(player.jumping){
       player.checkingJumping(level);
@@ -68,9 +68,8 @@ function sceneLoading(timestamp){
   }
 
 
-
-  if(player.falling === true || player.moveRight === true 
-    || player.moveLeft === true){
+// this is simply the movement controls
+  if(player.falling || player.moveRight || player.moveLeft){
     console.log(player.falling, "falling")
   var collision = new Collision(level, player);
   player.checkingStatues(level);
